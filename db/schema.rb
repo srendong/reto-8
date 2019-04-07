@@ -16,6 +16,7 @@ ActiveRecord::Schema.define(version: 2019_04_07_175955) do
     t.string "name"
     t.string "image_url"
     t.date "released_at"
+    t.integer "artist_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -31,6 +32,7 @@ ActiveRecord::Schema.define(version: 2019_04_07_175955) do
     t.string "name"
     t.integer "number"
     t.string "preview_url"
+    t.integer "album_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
