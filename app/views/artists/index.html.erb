@@ -1,14 +1,15 @@
-<div class="container bg-dark">
+<div class="container bg-light">
   <div class="row ">
-      <% @artists.each do |artista| %>
-        <div class="card col-4" style="width: 15rem;">
-          <img class="card-img-top" src="<%=artista.image_url%>"   alt="Card image cap">
+    <% @artists.each do |artista| %>
+      <div class="col-2">
+        <div class="card text-center" style="height: 22rem; width: 18rem;">
+          <img class="card-img-top " src="<%=artista.image_url%>" alt="Card image cap" syle=" width: 100%; height: 50%; object-fit: cover;">
           <div class="card-body">
             <h5 class="card-title text-center font-weight-bold"><%= artista.name%></h5>
-            <div class="btn btn-primary  col-sm 4 text-center"><%= link_to 'Ver mas', artista %> </div>
+            <div class="btn btn-primary col-12"><%= link_to 'Ver mas', artista, :class => "btn btn-primary" %></div>
           </div>
         </div>
-      <% end %>
-
+      </div>
+    <% end %>
   </div>
 </div>
